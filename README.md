@@ -57,9 +57,9 @@ Instalar as dependências do projeto
 composer install
 ```
 
-Gerar as migrates
+Gerar as migrates com populate faker
 ```
-php artisan migrate
+php artisan migrate --seed
 ```
 
 Gerar a key do projeto Laravel
@@ -90,7 +90,7 @@ mutation{
     description:"Esse é um produto via mutation",
     brand: "MarcaX",
     category: "P123",
-    price: "20.90",
+    price: 20.90,
     color: "azul"
   ){
     name
@@ -101,7 +101,7 @@ mutation{
 Exemplo para listar produtos:
 ```sh
 query{
-  products(page:1){
+  products(first:10, page:1){
     data{
       name
       description

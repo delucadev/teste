@@ -23,12 +23,12 @@ type Product{
   description: String
   brand: String!
   category: String!
-  price: String!
+  price: Float!
   color: String!
   created_at: DateTime!
   updated_at: DateTime!
 }
 
 type Mutation{
-  CreateProductMutation(name: String!, description: String, brand: String!, category: String!, price: String!, color: String!):Product
+  CreateProductMutation(name: String!, description: String, brand: String!, category: String!, price: Float!, color: String!):Product
 }
