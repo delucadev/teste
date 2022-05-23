@@ -57,6 +57,10 @@ Instalar as dependências do projeto
 composer install
 ```
 
+Gerar as migrates
+```
+php artisan migrate
+```
 
 Gerar a key do projeto Laravel
 ```sh
