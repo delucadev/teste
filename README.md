@@ -1,5 +1,5 @@
 
-# Teste Backend
+# Teste Vaga Desenvolvedor Backend
 
 ### Passo a passo
 Clone Repositório
@@ -66,3 +66,45 @@ php artisan key:generate
 
 Acesse o projeto
 [http://localhost:81](http://localhost:81)
+
+
+### ENDPOINTS API REST
+* [GET] [http://localhost:81/products](http://localhost:81/products)
+* [POST] [http://localhost:81/products](http://localhost:81/products)
+* [GET] [http://localhost:81/product/id](http://localhost:81/product/id)
+* [PUT] [http://localhost:81/product/id](http://localhost:81/product/id)
+* [POST] [http://localhost:81/product/id](http://localhost:81/product/id)
+
+### TESTE GRAPHQL PLAYGROUND
+Acesse: [http://localhost:81/graphql-playground](http://localhost:81/graphql-playground) 
+
+Exemplo para criar produto: 
+```sh
+mutation{
+  CreateProductMutation(
+    name:"Produto 123", 
+    description:"Esse é um produto via mutation",
+    brand: "MarcaX",
+    category: "P123",
+    price: "20.90",
+    color: "azul"
+  ){
+    name
+  }
+}
+```
+
+Exemplo para listar produtos:
+```sh
+query{
+  products(page:1){
+    data{
+      name
+      description
+      brand
+      price
+    }
+  }
+}
+```
+
